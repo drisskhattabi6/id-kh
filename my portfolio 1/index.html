@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        This website programmed by "idriss khattabi"
+        Email : drisskhattabi6@gmail.com
+     -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this website is a portfolio about me ('Idriss Khattabi')">
+    <meta name="keywords" content="Protfolio, Fullstack developer, web designer, Python Django Developer">
+    <meta name="author" content="Idriss Khattabi">
+    <title>Protfolio - id-kh</title>
+    <link rel="stylesheet" href="Styles/css-reset.css">
+    <link rel="stylesheet" href="Styles/myframwork.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- popping font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav flex-space-between">
+                <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
+                <ul class="nav1 flex-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!-- Mobile mode navbar -->
+                <button id="bar-btn" class="btn"><i class="fa-solid fa-bars"></i></button>
+                <div id="mobile-bar" class="side-bar flex-start-colum">
+                    <div class="flex-space-between">
+                        <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
+                        <button id="cancel-btn" class="btn"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <ul class="flex-center-colum">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-content flex-space-around">
+                <div class="description flex-center-colum">
+                    <h1 class="name">Hi, I'm Idriss</h1>
+                    <p class="job">Full Stack Developer / Responsive Web Designer </p> <!-- / Graphic Designer / Web Developer -->
+                    <div class="medias flex-center">
+                        <div class="media flex-center">
+                            <a href="https://github.com/drisskhattabi6" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <div class="media flex-center">
+                            <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <div class="media flex-center">
+                            <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="media flex-center">
+                            <a href="https://www.pinterest.com/drisskhattabi6/" target="_blank" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                        <!--
+                            <div class="media flex-center">
+                                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                            </div>
+                        -->
+                    </div>
+                    <a href="#contact"><button class="btn hire-me">Hire Me</button></a>
+                </div>
+                <div class="personal-pic flex-center">
+                    <img src="Imgs/pic1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="about" class="about flex-center-colum">
+                <h1 class="main-title">About</h1>
+                <div class="about-content flex-center">
+                    <div class="personal-pic flex-center">
+                        <img src="Imgs/pic2.jpg" alt="">
+                    </div>
+                    <div class="description flex-center-colum">
+                        <h1 class="name">Who I Am?</h1>
+                        <p class="info">My name is idriss Khattabi. I'm a Freelance Full Stack Developer And Responsive Web Designer. and I'm very passionate and dedicated to my work. I have acquired the skills necessary to build great and premium website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="skills"  class="skills flex-center-colum">
+                <h1 class="main-title">Skills</h1>
+                <div class="skills flex-center-wrap">
+                    <div class="skill">
+                        <img src="Imgs/html.png" alt="" class="skill-img">
+                        <p class="skill-p">HTML</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/css.png" alt="" class="skill-img">
+                        <p class="skill-p">CSS</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/js.png" alt="" class="skill-img">
+                        <p class="skill-p">JavaScript</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/java.png" alt="" class="skill-img">
+                        <p class="skill-p">Java</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/python.png" alt="" class="skill-img">
+                        <p class="skill-p">Python</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/dj.png" alt="" class="skill-img">
+                        <p class="skill-p">Django</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/c.png" alt="" class="skill-img">
+                        <p class="skill-p">C</p>
+                    </div>
+                    <div class="skill">
+                        <img src="Imgs/photoshop.png" alt="" class="skill-img">
+                        <p class="skill-p">PhotoShop</p>
+                    </div>
+                </div>
+            </div>
+            <div id="services" class="services flex-center-colum">
+                <h1 class="main-title">Services</h1>
+                <div class="services-container flex-center-wrap">
+                    <div class="service flex-center-colum">
+                        <!-- <i class="fa-solid fa-server"></i> -->
+                        <div class="img">
+                            <img src="Imgs/Fullstack_thumb.svg" alt="Fullstack_thumb">
+                        </div>
+                        <h1>Full-stack Developer</h1>
+                        <p>I'm a Python Django Developer.</p>
+                    </div>
+                    <div class="service flex-center-colum">
+                        <!-- <i class="fa-solid fa-code"></i> -->
+                        <div class="img">
+                            <img src="Imgs/Responsive_Thumb.svg" alt="Responsive_Thumb" class="img">
+                        </div>
+                        <h1>Responsive Web Designer</h1>
+                        <p> I can build great and premium website for you.</p>
+                    </div>
+                    
+                    <!-- <i class="fa-solid fa-pen-nib"></i> -->
+                    <!-- <div class="service flex-center-colum">
+                        <div class="img"></div>
+                        <h1>Graphic Designer</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div> -->
+                   
+                </div>
+            </div>
+            <div id="projects" class="projects flex-center-colum">
+                <h1 class="main-title">Projects</h1>
+                <div class="projects-container flex-center-wrap">
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/Fylo Dark Theme Landing Page.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/fylo-dark-theme-landing-page/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Fylo Dark Theme Landing Page</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/Sunnyside agency landing page.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/sunnyside-agency-lg/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Sunnyside agency landing page</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/Huddle Landing Page.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/huddle-landing-page/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Huddle Landing Page</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project1.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/front-end-projects/crypto%20currency%20market/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Crypto Currency Online Price</h1>
+                    </div>
+                    <!-- <div class="project flex-center-colum">
+                        <img src="Imgs/project2.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/Color-Generator/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Color Generator</h1>
+                    </div> -->
+                    <!-- <div class="project flex-center-colum">
+                        <img src="Imgs/project3.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/stopwatch-app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Stowatch App</h1>
+                    </div> -->
+                    <!-- <div class="project flex-center-colum">
+                        <img src="Imgs/project4.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/Password-Generator/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Password Generator</h1>
+                    </div> -->
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project5.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/Notes-App/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Note App</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project6.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/movie-app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Movie App</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project7.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/rest-countries-api/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">All Countries</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project8.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/ip-address-tracker/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">IP Address Tracker</h1>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/project9.png" alt="">
+                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/url-shortening-api/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">URL Shortening</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="contact flex-center-colum">
+                <h1 class="main-title">Contact Me</h1>
+                <form class="flex-center-colum">
+                    <div class="input-container flex-center">
+                        <div class="input flex-center-colum">
+                            <label for="input-name">Sender Name</label>
+                            <input type="text" name="" id="input-name" placeholder="Type your name">
+                        </div>
+                        <div class="input flex-center-colum">
+                            <label for="input-subject">Subject</label>
+                            <input type="text" name="" id="input-subject" placeholder="Type the Subject">
+                        </div>
+                        <div class="input flex-center-colum">
+                            <label for="input-email">Email</label>
+                            <input type="email" name="" id="input-email" placeholder="Type your email address">
+                        </div>
+                    </div>
+                    <div class="textarea flex-center-colum">
+                        <label for="input-msg">Your Message</label>
+                        <textarea name="" id="input-msg" placeholder="Type your Message here..."></textarea>
+                    </div>
+                </form>
+                <button id="submit-btn" class="btn">submit</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container ">
+            <div class="footer flex-space-between">
+                <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
+                <ul class="info2 flex-start-colum">
+                    <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>id.kh.freelancer@gmail.com</p></li>
+                    <li class="flex-center"><i class="fa-brands fa-whatsapp"></i><p>+212635245797</p></li>
+                </ul>
+                <ul class="flex-center-colum">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="medias flex-center-colum">
+                    <div class="media flex-center">
+                        <a href="https://github.com/drisskhattabi6" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="media flex-center">
+                        <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="media flex-center">
+                        <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="media flex-center">
+                        <a href="https://www.pinterest.com/drisskhattabi6/" target="_blank" class="pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <p class="copyright">
+                Copyrights &copy; reserved by the creator, 
+                Made with love <span>❤</span> by Idriss Khattabi.
+            </p>
+        </div>
+    </footer>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
