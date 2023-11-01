@@ -13,7 +13,7 @@
     --transition : .5s;
 } 
 
-::selection : {
+::selection {
     background-color: red;
     color: green;
 }
