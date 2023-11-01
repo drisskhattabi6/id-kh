@@ -13,6 +13,11 @@
     --transition : .5s;
 } 
 
+::selection : {
+    background-color: red;
+    color: green;
+}
+
 body {
     background-color: var(--color3);
     overflow-x: hidden;
