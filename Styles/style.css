@@ -223,7 +223,7 @@ header button:hover {
 }
 .about-content .personal-pic{
     position: relative;
-    width: 50%;
+    width: 40%;
 }
 .about-content .personal-pic img {
     width: 100%;
@@ -243,14 +243,14 @@ header button:hover {
     z-index: -1;
 }
 .about-content .description {
-    width: 50%;
+    width: 60%;
 }
 .info {
     color: var(--color1);
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 @media screen and (max-width : 950px) {
@@ -289,9 +289,9 @@ header button:hover {
 }
 
 .skill {
-    padding: 15px;
-    margin: 15px;
-    width: 21%;
+    padding: 10px;
+    margin: 10px;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
