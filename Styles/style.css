@@ -600,3 +600,28 @@ footer {
     }
 }
 /******** end footer section *********/
+
+#certification {
+    
+}
+
+#certification table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+#certification th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+#certification th {
+    background-color: #f4f4f4;
+}
+#certification a {
+    color: #3498db;
+    text-decoration: none;
+}
+#certification a:hover {
+    text-decoration: underline;
+}
