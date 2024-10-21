@@ -4,7 +4,7 @@ this repositorie contain my portfolio project, and I create it using HTML, CSS, 
 
 => visite my portfolio website **[FROM HERE](https://drisskhattabi6.github.io/id-kh)**.
 
-=> Last Update : **13/06/2024**
+=> Last Update : **21/10/2024**
 
 Screenshots :
 
