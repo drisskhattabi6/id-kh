@@ -606,7 +606,7 @@ footer {
 }
 
 #certification table {
-    width: 50%;
+    width: 90%;
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -614,14 +614,7 @@ footer {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
-}
-#certification th {
-    background-color: #f4f4f4;
-}
-#certification a {
-    color: #3498db;
-    text-decoration: none;
-}
-#certification a:hover {
-    text-decoration: underline;
+    color : #fff;
+    font-size: 22px;
+    font-weight: 600;
 }
