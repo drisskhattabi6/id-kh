@@ -23,6 +23,70 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
     </style>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+    h3 {
+        margin-top: 20px;
+        color: #fa8201;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .skills-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 25px 0;
+    }
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80px;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px 15px;
+        color: #fff;
+        margin: 0 10px;
+        transition: all var(--transition) ease;
+        text-align: center; 
+        /* background-color: #ffffff13; */
+    }
+    .skill-item i {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+    
+    .project-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 15px;
+        text-align: center;
+        background-color: #fa8201;
+        width: 100%;
+    }
+
+    .project-tags span {
+        background-color: #e0f0ff;
+        color: #007acc;
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .project-tags span:hover {
+        background-color: #cce4ff;
+        transform: scale(1.05);
+        cursor: default;
+    }
+    </style>
+
 </head>
 <body>
     <header>
@@ -59,8 +123,8 @@
             <div class="header-content flex-space-around">
                 <div class="description flex-center-colum">
                     <h1 class="name">Hi, I'm Idriss</h1>
-                    <p class="job">AI and Data Science Master's student / Python Django Developer </p>
-                    <p class="job">Last portfolio update : 21/10/2024</p>
+                    <p class="job">AI Engineer | AI & Data Science Enthusiast | RAG & AI Agents | Python Django Developer</p>
+                    <p class="job">Last portfolio update : 14/06/2025</p>
                     <div class="medias flex-center">
                         <div class="media flex-center">
                             <a href="https://github.com/drisskhattabi6" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
@@ -81,7 +145,8 @@
                         -->
                     </div>
                     <a href="#contact"><button class="btn hire-me">Hire Me</button></a>
-                    <a href="https://drive.google.com/file/d/1WtlJh_oLa-hbhVGyHht7Vhe_Rwi6teB9/view" target="_blank">
+                    <!-- <a href="https://drive.google.com/file/d/1WtlJh_oLa-hbhVGyHht7Vhe_Rwi6teB9/view" target="_blank"> -->
+                    <a href="./idriss_kh_cv_en_dij.pdf" target="_blank">
                         <button class="btn download-cv" 
                         style="margin-top: 10px; background-color: rgb(111, 211, 11); border-radius: 10px; font-size: 25px !important;">Download CV</button>
                     </a>
@@ -102,16 +167,18 @@
                     </div>
                     <div class="description flex-center-colum">
                         <h1 class="name">Who I Am?</h1>
-                        <p class="info">My name is idriss Khattabi. I am a Master's student specializing in Artificial Intelligence and Data Science at Faculty of Sciences and Techniques in Tangier, Morocco. My journey into the world of AI and data science is driven by a passion for uncovering insights from complex datasets and developing innovative solutions to real-world problems.
-                            <br>
-                            <br>
-                            As I continue my educational journey, I am eager to apply my expertise to contribute to impactful projects and make meaningful contributions to the field of AI and data science. I'm looking  forward to connecting with like-minded professionals and exploring opportunities to collaborate on groundbreaking projects.
+                        <p class="info">
+            My name is Idriss Khattabi. I recently completed my Master’s degree in Artificial Intelligence and Data Science, where I developed a strong foundation in Python programming, machine and deep learning, natural language processing, and predictive modeling.
+            <br><br>
+            Throughout my academic and project-based experiences, I have cultivated a deep interest in generative AI, AI agents, and data-driven applications. I’ve also gained practical experience in web development using Django and have consistently demonstrated my ability to work collaboratively, lead initiatives, and adapt quickly in fast-paced environments.
+            <br><br>
+            As I transition into the next phase of my career, I am enthusiastic about contributing to innovative projects in AI and data science. I’m excited to connect with professionals in the field and explore new opportunities to grow, learn, and create impactful solutions.
                     </div>
                 </div>
             </div>
             <div id="skills"  class="skills flex-center-colum">
                 <h1 class="main-title">Skills</h1>
-                <div class="skills flex-center-wrap">
+                <!-- <div class="skills flex-center-wrap">
                     <div class="skill">
                         <img src="Imgs/html.png" alt="" class="skill-img">
                         <p class="skill-p">HTML</p>
@@ -124,10 +191,10 @@
                         <img src="Imgs/js.png" alt="" class="skill-img">
                         <p class="skill-p">JavaScript</p>
                     </div>
-<!--                     <div class="skill">
+                    <div class="skill">
                         <img src="Imgs/React.webp" alt="" class="skill-img">
                         <p class="skill-p">React JS</p>
-                    </div> -->
+                    </div>
                     <div class="skill">
                         <img src="Imgs/java.png" alt="" class="skill-img">
                         <p class="skill-p">Java</p>
@@ -180,7 +247,7 @@
                         <img src="Imgs/spark.webp" alt="" class="skill-img">
                         <p class="skill-p">PySpark</p>
                     </div>
-<!--                     <div class="skill">
+                    <div class="skill">
                         <img src="Imgs/hadoop.svg" alt="" class="skill-img">
                         <p class="skill-p">Hadoop</p>
                     </div>
@@ -191,7 +258,7 @@
                     <div class="skill">
                         <img src="Imgs/arduino.png" alt="" class="skill-img">
                         <p class="skill-p">arduino</p>
-                    </div> -->
+                    </div>
                     <div class="skill">
                         <img src="Imgs/LangChain.png" alt="" class="skill-img">
                         <p class="skill-p">LangChain</p>
@@ -220,14 +287,88 @@
                         <img src="Imgs/docker.webp" alt="" class="skill-img">
                         <p class="skill-p">Docker</p>
                     </div>
-<!--                     <div class="skill">
-                        <img src="Imgs/photoshop.png" alt="" class="skill-img">
-                        <p class="skill-p">PhotoShop</p>
-                    </div> -->
                     <div class="skill">
                         <img src="Imgs/powerBI.png" alt="" class="skill-img">
                         <p class="skill-p">PowerBI</p>
-                    </div>
+                    </div> -->
+
+                <h3>Programming Languages</h3>
+                <div class="skills-section">
+                    <div class="skill-item skill"><i class="devicon-python-plain colored"></i>Python</div>
+                    <div class="skill-item"><i class="devicon-java-plain colored"></i>Java</div>
+                    <div class="skill-item"><i class="devicon-c-plain colored"></i>C</div>
+                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
+                    <div class="skill-item"><i class="devicon-mysql-plain colored"></i>SQL</div>
+                    <div class="skill-item"><i class="devicon-solidity-plain colored"></i>Solidity</div>
+                    <div class="skill-item"><i class="devicon-bash-plain colored"></i>Bash</div>
+                    <div class="skill-item"><i class="devicon-latex-original colored"></i>LaTeX</div>
+                <!-- LaTeX, Solidity: Not in Devicon -->
+                </div>
+
+                <h3>Web Development</h3>
+                <div class="skills-section">
+                <div class="skill-item"><i class="devicon-html5-plain colored"></i>HTML</div>
+                <div class="skill-item"><i class="devicon-css3-plain colored"></i>CSS</div>
+                <div class="skill-item"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
+                <div class="skill-item"><i class="devicon-react-original colored"></i>ReactJS</div>
+                <div class="skill-item"><i class="devicon-django-plain colored"></i>Django</div>
+                <!-- Streamlit: Not in Devicon -->
+                </div>
+
+                <h3>Machine Learning & AI</h3>
+                <div class="skills-section">
+                    <div class="skill-item"><i class="devicon-scikit-learn-plain colored"></i>scikit-learn</div>
+                    <div class="skill-item"><i class="devicon-pytorch-original colored"></i>PyTorch</div>
+                    <div class="skill-item"><i class="devicon-nltk-plain colored"></i>NLTK</div>
+                    <div class="skill-item"><i class="devicon-opencv-plain colored"></i>OpenCV</div>
+                    <div class="skill-item">LangChain</div>
+                <!-- Hugging Face, LLMs, RAG, Fine-tuning, LangChain: Not in Devicon -->
+                </div>
+
+                <h3>Data Analysis & Visualization</h3>
+                <div class="skills-section">
+                    <div class="skill-item"><i class="devicon-numpy-plain colored"></i>NumPy</div>
+                    <div class="skill-item"><i class="devicon-pandas-plain colored"></i>Pandas</div>
+                    <div class="skill-item"><i class="devicon-matplotlib-plain colored"></i>Matplotlib</div>
+                    <div class="skill-item">Seaborn</div>
+                    <div class="skill-item">Power BI</div>
+                <!-- Seaborn, Power BI: Not in Devicon -->
+                </div>
+
+                <h3>Web Scraping & Automation</h3>
+                <div class="skills-section">
+                    <div class="skill-item"><i class="devicon-selenium-original colored"></i>Selenium</div>
+                    <div class="skill-item"><i class="devicon-beautifulsoup-plain colored"></i>BeautifulSoup</div>
+                </div>
+
+                <h3>Big Data & Workflow Tools</h3>
+                <div class="skills-section">
+                <div class="skill-item"><i class="devicon-apachespark-original colored"></i>Spark</div>
+                <div class="skill-item"><i class="devicon-apachekafka-original colored"></i>Kafka</div>
+                <div class="skill-item"><i class="devicon-apacheairflow-plain colored"></i>Airflow</div>
+                <div class="skill-item"><i class="devicon-hadoop-plain colored"></i>Hadoop</div>
+                </div>
+
+                <h3>Databases</h3>
+                <div class="skills-section">
+                <div class="skill-item"><i class="devicon-mysql-plain colored"></i>MySQL</div>
+                <div class="skill-item"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</div>
+                <div class="skill-item"><i class="devicon-mongodb-plain colored"></i>MongoDB</div>
+                <div class="skill-item">ChromaDB</div>
+                <!-- ChromaDB, FAISS: Not in Devicon -->
+                </div>
+
+                <h3>DevOps & Tools</h3>
+                <div class="skills-section">
+                <div class="skill-item"><i class="devicon-ubuntu-plain colored"></i>Linux</div>
+                <div class="skill-item"><i class="devicon-git-plain colored"></i>Git</div>
+                <div class="skill-item"><i class="devicon-github-original colored"></i>GitHub</div>
+                <div class="skill-item"><i class="devicon-docker-plain colored"></i>Docker</div>
+                <div class="skill-item"><i class="devicon-vscode-plain colored"></i>VS Code</div>
+                <div class="skill-item"><i class="devicon-jupyter-plain colored"></i>Jupyter</div>
+                <!-- Kaggle: Not in Devicon -->
+                </div>
+
                 </div>
             </div>
             <div id="services" class="services flex-center-colum">
@@ -268,50 +409,176 @@
                 <h1 class="main-title">Projects</h1>
                 <div class="projects-container flex-center-wrap">
                     <div class="project flex-center-colum">
-                        <img src="Imgs/Fylo Dark Theme Landing Page.png" alt="">
-                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/front-end-projects/fylo-dark-theme-lp/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Fylo Landing Page</h1>
+                        <img src="Imgs/chatpdf.gif" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Chat-with-PDF-Locally" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">ChatPDF : Chat with PDF Locally</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>RAG</span>
+                            <span>NLP</span>
+                            <span>Chatbot</span>
+                            <span>ChromaDB</span>
+                            <span>Streamlit</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
-                        <img src="Imgs/Sunnyside agency landing page.png" alt="">
-                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/front-end-projects/sunnyside-agency-lp/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Sunnyside Agency Landing Page</h1>
+                        <img src="Imgs/ai-scraper.gif" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/AI-Scraper" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">AI Scraper</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Scraper</span>
+                            <span>Selenium</span>
+                            <span>BeautifulSoup</span>
+                            <span>Streamlit</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
-                        <img src="Imgs/project7.png" alt="">
-                        <div class="open-link flex-center"><a href="https://drisskhattabi6.github.io/front-end-projects/rest-countries-api/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">World Countries Informations</h1>
+                        <img src="Imgs/moroccan-meals.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Moroccan-Meal-Recipes-Chatbot" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Moroccan Meal Recipes Chatbot</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Chatbot</span>
+                            <span>NLP</span>
+                            <span>RAG</span>
+                            <span>Streamlit</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
-                        <img src="Imgs/blog-img.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Blog-Project" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Django Blog Project</h1>
+                        <img src="Imgs/obstacle-detection.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Obstacle-Detection-with-Alert-System-for-Visually-Impaired" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Obstacle Detection & Alert System for the Visually Impaired</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Computer Vision</span>
+                            <span>CNN</span>
+                            <span>Node-Red</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
-                        <img src="Imgs/note-img.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Note-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Django Notes Project</h1>
+                        <img src="Imgs/docs-blockchain.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Medical-Record-With-Blockchain/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Medical Document Management Blockchain System</h1>
+                        <div class="project-tags">
+                            <span>Blockchain</span>
+                            <span>Ethereum</span>
+                            <span>Desktop App (Tkinter)</span>
+                            <span>Web App (React)</span>
+                            <span>Web3</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/stock-market.jpg" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Energy-Consumption-Analysis-and-Prediction" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Energy Consumption Analysis and Prediction</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>LSTM</span>
+                            <span>PyTorch</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/data-warehouse.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Commerce-Data-Warehouse-Building-and-Analysis" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Commerce Data Warehouse Building and Analysis</h1>
+                        <div class="project-tags">
+                            <span>Data Warehouse</span>
+                            <span>MySQL</span>
+                            <span>ETL</span>
+                            <span>Pandas</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/ocr.jpg" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/OCR-From-Scratch" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">OCR From Scratch</h1>
+                        <div class="project-tags">
+                            <span>OCR</span>
+                            <span>Tesseract</span>
+                            <span>CNN</span>
+                            <span>CRNN</span>
+                            <span>YOLO</span>
+                            <span>OpenCV</span>
+                            <span>Streamlit</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
                         <img src="Imgs/ml-app.png" alt="">
                         <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Data-Analysis-And-ML-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                         <h1 class="project-title">Data Analysis & Machine Learning Desktop App</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analysis</span>
+                            <span>Desktop App (Tkinter)</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
                         <img src="Imgs/Sentiment-Analysis.png" alt="">
                         <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Real-Time-Twitter-Sentiment-Analysis" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                         <h1 class="project-title">Real Time Twitter Sentiment Analysis Using Big Data</h1>
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Sentiment Analysis</span>
+                            <span>Big Data</span>
+                            <span>Spank</span>
+                            <span>Kafka</span>
+                            <span>Django</span>
+                            <span>MongoDB</span>
+                        </div>
                     </div>
                     <div class="project flex-center-colum">
+                        <img src="Imgs/blog-img.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Blog" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Django Blog</h1>
+                        <div class="project-tags">
+                            <span>Blog</span>
+                            <span>Django</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/marketplace.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Marketplace" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Django Marketplace</h1>
+                        <div class="project-tags">
+                            <span>Marketplace</span>
+                            <span>Django</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/chat-llm.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Chat-with-LLM-Locally" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Chat with LLM Locally</h1>
+                        <div class="project-tags">
+                            <span>Chatbot</span>
+                            <span>LLM</span>
+                            <span>Hagging Face</span>
+                            <span>Django</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                    <div class="project flex-center-colum">
+                        <img src="Imgs/note-img.png" alt="">
+                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Note-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+                        <h1 class="project-title">Django Notes Project</h1>
+                        <div class="project-tags">
+                            <span>Notes</span>
+                            <span>Django</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+
+                    <!-- <div class="project flex-center-colum">
                         <img src="Imgs/chatbot.png" alt="">
                         <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/FSTT_chatbot" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
                         <h1 class="project-title">A Chatbot About My Faculty (FSTT) Using NLP</h1>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/data_mining.jpg" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/meteo-data-mining" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Meteo Data Mining</h1>
-                    </div>
+                    </div> -->
                     <div class="project flex-center-colum" style="border-radius: 0; width: 60%;">
                         <h1 class="project-title" style="color: black; cursor: auto;">You Can See More Project In My Github Profile</h1>
                     </div>
@@ -375,7 +642,8 @@
             <div class="footer flex-space-between">
                 <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
                 <ul class="info2 flex-start-colum">
-                    <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>id.kh.freelancer@gmail.com</p></li>
+                    <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>drisskhattabi6@gmail.com</p></li>
+                    <!-- <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>id.kh.freelancer@gmail.com</p></li> -->
                     <li class="flex-center"><i class="fa-brands fa-whatsapp"></i><p>+212635245797</p></li>
                 </ul>
                 <ul class="flex-center-colum">
