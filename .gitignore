@@ -1,3 +1,8 @@
 Imgs/caches/*
 Imgs/caches/
 caches/
+.\Imgs\caches
+Imgs\caches\
+Imgs\caches\*
+caches\*
+caches/

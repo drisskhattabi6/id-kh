@@ -298,19 +298,21 @@ header button:hover {
     flex-direction: column;
 }
 
-    h3 {
+h3 {
         margin-top: 20px;
         color: #fa8201;
         font-size: 30px;
         font-weight: 700;
     }
-    .skills-section {
+
+.skills-section {
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
         margin: 25px 0;
     }
-    .skill-item {
+
+.skill-item {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -325,7 +327,8 @@ header button:hover {
         text-align: center; 
         /* background-color: #ffffff13; */
     }
-    .skill-item i {
+
+.skill-item i {
         font-size: 60px;
         margin-bottom: 10px;
     }
@@ -492,7 +495,7 @@ header button:hover {
     width: 100%;
 }
     
-    .project-tags {
+.project-tags {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
@@ -502,7 +505,7 @@ header button:hover {
         width: 100%;
     }
 
-    .project-tags span {
+.project-tags span {
         background-color: #e0f0ff;
         color: #007acc;
         font-size: 12px;
@@ -515,7 +518,7 @@ header button:hover {
         transition: background-color 0.3s, transform 0.2s;
     }
 
-    .project-tags span:hover {
+.project-tags span:hover {
         background-color: #cce4ff;
         transform: scale(1.05);
         cursor: default;
