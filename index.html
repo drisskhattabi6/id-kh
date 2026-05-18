@@ -1,505 +1,541 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!-- 
-        This website programmed by "idriss khattabi"
-        Email : drisskhattabi6@gmail.com
-     -->
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="this website is a portfolio about me ('Idriss Khattabi')">
-    <meta name="keywords" content="Protfolio, Fullstack developer, web designer, Python Django Developer">
-    <meta name="author" content="Idriss Khattabi">
-    <title>Protfolio - id-kh</title>
-    <link rel="stylesheet" href="Styles/css-reset.css">
-    <link rel="stylesheet" href="Styles/myframwork.css">
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <!-- popping font -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-    </style>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Idriss Khattabi - AI Engineer, AI Developer, RAG systems, AI Agents, Data Pipelines, and Full-Stack AI applications."
+  />
+  <meta
+    name="keywords"
+    content="Portfolio, AI Engineer, AI Developer, RAG, AI Agents, Django Developer, Data Science, Next.js, Docker, Qdrant, Weaviate"
+  />
+  <meta name="author" content="Idriss Khattabi" />
+  <title>Portfolio | Idriss Khattabi</title>
 
+  <script>
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#ecfdf5",
+              100: "#d1fae5",
+              500: "#10b981",
+              600: "#059669",
+              700: "#047857"
+            }
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(2, 8, 23, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .dark .glass {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(51, 65, 85, 0.55);
+    }
+
+    .section-title {
+      @apply text-3xl md:text-4xl font-bold tracking-tight;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    #networkCanvas {
+      pointer-events: none;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.55);
+      border-radius: 999px;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav class="nav flex-space-between">
-                <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
-                <ul class="nav1 flex-center">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certification">Certificates</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <!-- Mobile mode navbar -->
-                <button id="bar-btn" class="btn"><i class="fa-solid fa-bars"></i></button>
-                <div id="mobile-bar" class="side-bar flex-start-colum">
-                    <div class="flex-space-between">
-                        <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
-                        <button id="cancel-btn" class="btn"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                    <ul class="flex-center-colum">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">skills</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#certification">Certificates</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="header-content flex-space-around">
-                <div class="description flex-center-colum">
-                    <h1 class="name">Hi, I'm Idriss</h1>
-                    <p class="job">AI Engineer | AI & Data Science Enthusiast | RAG & AI Agents | Python Django Developer</p>
-                    <p class="job">Last portfolio update : 14/06/2025</p>
-                    <div class="medias flex-center">
-                        <div class="media flex-center">
-                            <a href="https://github.com/drisskhattabi6" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                        <div class="media flex-center">
-                            <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                        <div class="media flex-center">
-                            <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                        <div class="media flex-center">
-                                <a href="https://www.datacamp.com/portfolio/drisskhattabi6" target="_blank" class="datacamp"><img src='Imgs/datacamp.svg' alt='datacamp logo' style='width:30px; height:30px'></a>
-                        </div>
-                        <!--
-                            <div class="media flex-center">
-                                <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                            </div>
-                        -->
-                    </div>
-                    <a href="#contact"><button class="btn hire-me">Hire Me</button></a>
-                    <!-- <a href="https://drive.google.com/file/d/1WtlJh_oLa-hbhVGyHht7Vhe_Rwi6teB9/view" target="_blank"> -->
-                    <a href="./CVs/Idriss Khattabi - AI CV EN.pdf" target="_blank">
-                        <button class="btn download-cv" 
-                        style="margin-top: 10px; background-color: rgb(111, 211, 11); border-radius: 10px; font-size: 25px !important;">Download CV</button>
-                    </a>
-                </div>
-                <div class="personal-pic flex-center">
-                    <img src="Imgs/pic1.png" alt="">
-                </div>
-            </div>
+<body class="bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+  <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(6,182,212,0.10),_transparent_25%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(6,182,212,0.12),_transparent_25%)]"></div>
+  <canvas id="networkCanvas" class="fixed inset-0 -z-10"></canvas>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur-md dark:border-slate-800/60 dark:bg-slate-950/70">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="Imgs/my logo1.png" alt="Idriss Khattabi logo" class="h-10 w-30 rounded-l object-cover" />
+        <div>
+          <p class="text-sm font-semibold leading-none">Idriss Khattabi</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400">AI Engineer Portfolio</p>
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <div id="about" class="about flex-center-colum">
-                <h1 class="main-title">About</h1>
-                <div class="about-content flex-center">
-                    <div class="personal-pic flex-center">
-                        <img src="Imgs/1.jpg" alt="personel image">
-                    </div>
-                    <div class="description flex-center-colum">
-                        <h1 class="name">Who I Am?</h1>
-                        <p class="info">
-            My name is Idriss Khattabi. I recently completed my Master’s degree in Artificial Intelligence and Data Science, where I developed a strong foundation in Python programming, machine and deep learning, natural language processing, and predictive modeling.
-            <br><br>
-            Throughout my academic and project-based experiences, I have cultivated a deep interest in generative AI, AI agents, and data-driven applications. I’ve also gained practical experience in web development using Django and have consistently demonstrated my ability to work collaboratively, lead initiatives, and adapt quickly in fast-paced environments.
-            <br><br>
-            As I transition into the next phase of my career, I am enthusiastic about contributing to innovative projects in AI and data science. I’m excited to connect with professionals in the field and explore new opportunities to grow, learn, and create impactful solutions.
-                    </div>
-                </div>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex">
+        <a href="#about" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">About</a>
+        <a href="#skills" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Skills</a>
+        <a href="#experience" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Experience</a>
+        <a href="#services" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Services</a>
+        <a href="#projects" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Projects</a>
+        <a href="#certifications" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Certificates</a>
+        <a href="#contact" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button
+          type="button"
+          data-theme-toggle
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:text-brand-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+          aria-label="Toggle theme"
+        ></button>
+
+        <a
+          href="./CVs/Idriss_Khattabi_CV_EN_AI.pdf"
+          target="_blank"
+          class="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700 lg:inline-flex"
+        >
+          Download CV
+        </a>
+
+        <button
+          id="menuBtn"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm lg:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-4 py-4 dark:border-slate-800 dark:bg-slate-950 lg:hidden">
+      <div class="flex flex-col gap-3">
+        <a href="#about" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">About</a>
+        <a href="#skills" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Skills</a>
+        <a href="#experience" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Experience</a>
+        <a href="#services" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Services</a>
+        <a href="#projects" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Projects</a>
+        <a href="#certifications" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Certificates</a>
+        <a href="#contact" class="mobile-link rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-900">Contact</a>
+        <a
+          href="./CVs/Idriss Khattabi - AI CV EN.pdf"
+          target="_blank"
+          class="mt-2 rounded-xl bg-brand-600 px-4 py-3 text-center font-semibold text-white"
+        >
+          Download CV
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div>
+          <span class="inline-flex rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 dark:border-brand-900 dark:bg-brand-500/10 dark:text-brand-300">
+            Open to AI / Data / Digitalization opportunities
+          </span>
+
+          <h1 class="mt-6 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+            Hi, I'm <span class="gradient-text">Idriss Khattabi</span>
+          </h1>
+
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            AI Engineer focused on <strong>RAG systems</strong>, <strong>AI agents</strong>,
+            <strong>document intelligence</strong>, <strong>data pipelines</strong>, and
+            <strong>full-stack AI applications</strong>.
+          </p>
+
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">RAG</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">AI Agents</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Vector DBs</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Data Pipelines</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Django / Next.js</span>
+          </div>
+
+          <p class="mt-5 text-sm text-slate-500 dark:text-slate-400">
+            Last portfolio update: <strong>May 2026</strong>
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#contact" class="rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700">
+              Hire Me
+            </a>
+            <a href="#projects" class="rounded-full border border-slate-300 px-6 py-3 font-semibold transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-900">
+              View Projects
+            </a>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-4 text-2xl">
+            <a href="https://github.com/drisskhattabi6" target="_blank" class="transition hover:text-brand-600" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="transition hover:text-brand-600" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="transition hover:text-brand-600" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.datacamp.com/portfolio/drisskhattabi6" target="_blank" class="transition hover:text-brand-600" aria-label="DataCamp">
+              <img src="Imgs/datacamp.svg" alt="DataCamp" class="h-7 w-7" />
+            </a>
+          </div>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="glass rounded-2xl p-4 shadow-soft">
+              <p id="experienceCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">5</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Experience entries</p>
             </div>
-            <div id="skills"  class="skills flex-center-colum">
-                <h1 class="main-title">Skills</h1>
-
-                <h3>Programming Languages</h3>
-                <div class="skills-section">
-                    <div class="skill-item skill"><i class="devicon-python-plain colored"></i>Python</div>
-                    <div class="skill-item"><i class="devicon-java-plain colored"></i>Java</div>
-                    <div class="skill-item"><i class="devicon-c-plain colored"></i>C</div>
-                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
-                    <div class="skill-item"><i class="devicon-mysql-plain colored"></i>SQL</div>
-                    <div class="skill-item"><i class="devicon-solidity-plain colored"></i>Solidity</div>
-                    <div class="skill-item"><i class="devicon-bash-plain colored"></i>Bash</div>
-                    <div class="skill-item"><i class="devicon-latex-original colored"></i>LaTeX</div>
-                </div>
-
-                <h3>Web Development</h3>
-                <div class="skills-section">
-                <div class="skill-item"><i class="devicon-html5-plain colored"></i>HTML</div>
-                <div class="skill-item"><i class="devicon-css3-plain colored"></i>CSS</div>
-                <div class="skill-item"><i class="devicon-javascript-plain colored"></i>JavaScript</div>
-                <div class="skill-item"><i class="devicon-react-original colored"></i>ReactJS</div>
-                <div class="skill-item"><i class="devicon-django-plain colored"></i>Django</div>
-                <div class="skill-item"><i class="devicon-streamlit-plain colored"></i>Streamlit</div>
-                </div>
-
-                <h3>Machine Learning & AI</h3>
-                <div class="skills-section">
-                    <div class="skill-item"><i class="devicon-scikit-learn-plain colored"></i>scikit-learn</div>
-                    <div class="skill-item"><i class="devicon-pytorch-original colored"></i>PyTorch</div>
-                    <div class="skill-item"><i class="devicon-nltk-plain colored"></i>NLTK</div>
-                    <div class="skill-item"><i class="devicon-opencv-plain colored"></i>OpenCV</div>
-                    <div class="skill-item">LangChain</div>
-                <!-- Hugging Face, LLMs, RAG, Fine-tuning, LangChain: Not in Devicon -->
-                </div>
-
-                <h3>Data Analysis & Visualization</h3>
-                <div class="skills-section">
-                    <div class="skill-item"><i class="devicon-numpy-plain colored"></i>NumPy</div>
-                    <div class="skill-item"><i class="devicon-pandas-plain colored"></i>Pandas</div>
-                    <div class="skill-item"><i class="devicon-matplotlib-plain colored"></i>Matplotlib</div>
-                    <div class="skill-item">Seaborn</div>
-                    <div class="skill-item">Power BI</div>
-                </div>
-
-                <h3>Web Scraping & Automation</h3>
-                <div class="skills-section">
-                    <div class="skill-item">Crawl4AI</div>
-                    <div class="skill-item"><i class="devicon-selenium-original colored"></i>Selenium</div>
-                    <div class="skill-item">BeautifulSoup</div>
-                </div>
-
-                <h3>Big Data & Workflow Tools</h3>
-                <div class="skills-section">
-                <div class="skill-item"><i class="devicon-apachespark-original colored"></i>Spark</div>
-                <div class="skill-item"><i class="devicon-apachekafka-original colored"></i>Kafka</div>
-                <div class="skill-item"><i class="devicon-apacheairflow-plain colored"></i>Airflow</div>
-                <div class="skill-item"><i class="devicon-hadoop-plain colored"></i>Hadoop</div>
-                </div>
-
-                <h3>Databases</h3>
-                <div class="skills-section">
-                <div class="skill-item"><i class="devicon-mysql-plain colored"></i>MySQL</div>
-                <div class="skill-item"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</div>
-                <div class="skill-item"><i class="devicon-mongodb-plain colored"></i>MongoDB</div>
-                <div class="skill-item">ChromaDB</div>
-                </div>
-
-                <h3>DevOps & Tools</h3>
-                <div class="skills-section">
-                <div class="skill-item"><i class="devicon-ubuntu-plain colored"></i>Linux</div>
-                <div class="skill-item"><i class="devicon-git-plain colored"></i>Git</div>
-                <div class="skill-item"><i class="devicon-github-original colored"></i>GitHub</div>
-                <div class="skill-item"><i class="devicon-docker-plain colored"></i>Docker</div>
-                <div class="skill-item"><i class="devicon-vscode-plain colored"></i>VS Code</div>
-                <div class="skill-item"><i class="devicon-jupyter-plain colored"></i>Jupyter</div>
-                <div class="skill-item">Kaggle</div>
-                </div>
-
-                </div>
+            <div class="glass rounded-2xl p-4 shadow-soft">
+              <p id="projectCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">10</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Featured projects</p>
             </div>
-            <div id="services" class="services flex-center-colum">
-                <h1 class="main-title">Services</h1>
-                <div class="services-container flex-center-wrap">
-                    <div class="service flex-center-colum">
-                        <!-- <i class="fa-solid fa-server"></i> -->
-                        <div class="img">
-                            <img src="Imgs/Full-stack Developement.jpg" alt="Fullstack_thumb">
-                        </div>
-                        <h1>Full-stack Development</h1>
-                        <p>I'm a Python Django Developer.</p>
-                    </div>
-                    <!-- <div class="service flex-center-colum">
-                        <div class="img">
-                            <img src="Imgs/Responsive_Thumb.svg" alt="Responsive_Thumb" class="img">
-                        </div>
-                        <h1>Responsive Web Developer</h1>
-                        <p> I can build great and premium website for you.</p>
-                    </div> -->
-                    <div class="service flex-center-colum">
-                        <div class="img">
-                            <img src="Imgs/Data Analysis.png" alt="Data_Analysis_Thumb" class="img">
-                        </div>
-                        <h1>Data Analytic</h1>
-                        <p> I can analyse your data and give you the best solution.</p>
-                    </div>
-                    <div class="service flex-center-colum">
-                        <div class="img">
-                            <img src="Imgs/AI DEVELOPMENT.png" alt="AI_DEVELOPMENT_Thumb" class="img">
-                        </div>
-                        <h1>AI Development</h1>
-                        <p> I can build great ai applications for you.</p>
-                    </div>
-                </div>
+            <div class="glass rounded-2xl p-4 shadow-soft">
+              <p id="certCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">3</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Certificates</p>
             </div>
-            <div id="projects" class="projects flex-center-colum">
-                <h1 class="main-title">Projects</h1>
-                <div class="projects-container flex-center-wrap">
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/chatpdf.gif" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Chat-with-PDF-Locally" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">ChatPDF : Chat with PDF Locally</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>RAG</span>
-                            <span>NLP</span>
-                            <span>Chatbot</span>
-                            <span>ChromaDB</span>
-                            <span>Streamlit</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/ai-scraper.gif" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/AI-Scraper" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">AI Scraper</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Scraper</span>
-                            <span>Selenium</span>
-                            <span>BeautifulSoup</span>
-                            <span>Streamlit</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/moroccan-meals.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Moroccan-Meal-Recipes-Chatbot" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Moroccan Meal Recipes Chatbot</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Chatbot</span>
-                            <span>NLP</span>
-                            <span>RAG</span>
-                            <span>Streamlit</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/obstacle-detection.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Obstacle-Detection-with-Alert-System-for-Visually-Impaired" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Obstacle Detection & Alert System for the Visually Impaired</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Computer Vision</span>
-                            <span>CNN</span>
-                            <span>Node-Red</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/docs-blockchain.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Medical-Record-With-Blockchain/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Medical Document Management Blockchain System</h1>
-                        <div class="project-tags">
-                            <span>Blockchain</span>
-                            <span>Ethereum</span>
-                            <span>Desktop App (Tkinter)</span>
-                            <span>Web App (React)</span>
-                            <span>Web3</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/stock-market.jpg" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Energy-Consumption-Analysis-and-Prediction" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Energy Consumption Analysis and Prediction</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>LSTM</span>
-                            <span>PyTorch</span>
-                            <span>Pandas</span>
-                            <span>Matplotlib</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/data-warehouse.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Commerce-Data-Warehouse-Building-and-Analysis" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Commerce Data Warehouse Building and Analysis</h1>
-                        <div class="project-tags">
-                            <span>Data Warehouse</span>
-                            <span>MySQL</span>
-                            <span>ETL</span>
-                            <span>Pandas</span>
-                            <span>Power BI</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/ocr.jpg" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/OCR-From-Scratch" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">OCR From Scratch</h1>
-                        <div class="project-tags">
-                            <span>OCR</span>
-                            <span>Tesseract</span>
-                            <span>CNN</span>
-                            <span>CRNN</span>
-                            <span>YOLO</span>
-                            <span>OpenCV</span>
-                            <span>Streamlit</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/ml-app.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Data-Analysis-And-ML-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Data Analysis & Machine Learning Desktop App</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Machine Learning</span>
-                            <span>Data Analysis</span>
-                            <span>Desktop App (Tkinter)</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/Sentiment-Analysis.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Real-Time-Twitter-Sentiment-Analysis" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Real Time Twitter Sentiment Analysis Using Big Data</h1>
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Sentiment Analysis</span>
-                            <span>Big Data</span>
-                            <span>Spank</span>
-                            <span>Kafka</span>
-                            <span>Django</span>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/blog-img.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Blog" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Django Blog</h1>
-                        <div class="project-tags">
-                            <span>Blog</span>
-                            <span>Django</span>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/marketplace.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Marketplace" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Django Marketplace</h1>
-                        <div class="project-tags">
-                            <span>Marketplace</span>
-                            <span>Django</span>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/chat-llm.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Chat-with-LLM-Locally" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Chat with LLM Locally</h1>
-                        <div class="project-tags">
-                            <span>Chatbot</span>
-                            <span>LLM</span>
-                            <span>Hagging Face</span>
-                            <span>Django</span>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-                    <div class="project flex-center-colum">
-                        <img src="Imgs/note-img.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/Django-Note-App" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">Django Notes Project</h1>
-                        <div class="project-tags">
-                            <span>Notes</span>
-                            <span>Django</span>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-
-                    <!-- <div class="project flex-center-colum">
-                        <img src="Imgs/chatbot.png" alt="">
-                        <div class="open-link flex-center"><a href="https://github.com/drisskhattabi6/FSTT_chatbot" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
-                        <h1 class="project-title">A Chatbot About My Faculty (FSTT) Using NLP</h1>
-                    </div> -->
-                    <div class="project flex-center-colum" style="border-radius: 0; width: 60%;">
-                        <h1 class="project-title" style="color: black; cursor: auto;">You Can See More Project In My Github Profile</h1>
-                    </div>
-                </div>
-            </div>
-            <div id="contact" class="contact flex-center-colum">
-                <h1 class="main-title">Contact Me</h1>
-                <form class="flex-center-colum">
-                    <div class="input-container flex-center">
-                        <div class="input flex-center-colum">
-                            <label for="input-name">Sender Name</label>
-                            <input type="text" name="" id="input-name" placeholder="Type your name">
-                        </div>
-                        <div class="input flex-center-colum">
-                            <label for="input-subject">Subject</label>
-                            <input type="text" name="" id="input-subject" placeholder="Type the Subject">
-                        </div>
-                        <div class="input flex-center-colum">
-                            <label for="input-email">Email</label>
-                            <input type="email" name="" id="input-email" placeholder="Type your email address">
-                        </div>
-                    </div>
-                    <div class="textarea flex-center-colum">
-                        <label for="input-msg">Your Message</label>
-                        <textarea name="" id="input-msg" placeholder="Type your Message here..."></textarea>
-                    </div>
-                </form>
-                <button id="submit-btn" class="btn">submit</button>
-            </div>
-
-            <div id="certification" class="contact flex-center-colum">
-                <h1 class="main-title">Certifications</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Certification</th>
-                            <th>Link</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Associate Data Scientist in Python</td>
-                            <td><a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/af1630217d741a62f8f95342c4b9acc710561d1a" target="_blank">View Certificate</a></td>
-                        </tr>
-                        <tr>
-                            <td>Associate AI Engineer for Data Scientists</td>
-                            <td><a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/bbf8da39e2ea3460b9f6589e0b27fba83e6fd807" target="_blank">View Certificate</a></td>
-                        </tr>
-                        <tr>
-                            <td>Associate Data Analyst in SQL</td>
-                            <td><a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/6c0ad114a9ec6f303c0da5c924f903fddf9611da" target="_blank">View Certificate</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+          </div>
         </div>
-    </main>
-    <footer>
-        <div class="container ">
-            <div class="footer flex-space-between">
-                <a href="index.html"><img src="Imgs/my logo1.png" alt="id-kh logo" class="logo"></a>
-                <ul class="info2 flex-start-colum">
-                    <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>drisskhattabi6@gmail.com</p></li>
-                    <!-- <li class="flex-center"><i class="fa-solid fa-envelope"></i><p>id.kh.freelancer@gmail.com</p></li> -->
-                    <li class="flex-center"><i class="fa-brands fa-whatsapp"></i><p>+212635245797</p></li>
-                </ul>
-                <ul class="flex-center-colum">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certification">Certificates</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="medias flex-center-colum">
-                    <div class="media flex-center">
-                        <a href="https://github.com/drisskhattabi6" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <div class="media flex-center">
-                        <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <div class="media flex-center">
-                        <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <div class="media flex-center">
-                        <a href="https://www.datacamp.com/portfolio/drisskhattabi6" target="_blank" class="datacamp"><img src='Imgs/datacamp.svg' alt='datacamp logo' style='width:30px; height:30px'></a>
-                    </div>
-                </div>
-                
+
+        <div class="flex justify-center">
+          <div class="relative">
+            <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/20 to-cyan-500/20 blur-3xl"></div>
+            <div class="glass relative rounded-[2rem] p-3 shadow-soft">
+              <img
+                src="Imgs/pic1.png"
+                alt="Idriss Khattabi portrait"
+                class="h-[380px] w-[300px] rounded-[1.5rem] object-cover sm:h-[450px] sm:w-[350px]"
+              />
             </div>
-            <p class="copyright">
-                Copyrights &copy; reserved by the creator, 
-                Made with love <span>❤</span> by Idriss Khattabi.
-            </p>
+          </div>
         </div>
-    </footer>
-    <script src="Scripts/script.js"></script>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid items-center gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="glass rounded-3xl p-4 shadow-soft">
+          <img src="Imgs/1.jpg" alt="Idriss Khattabi" class="h-full w-full rounded-2xl object-cover" />
+        </div>
+
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">About Me</p>
+          <h2 class="mt-3 text-3xl font-bold md:text-4xl">Who I am</h2>
+
+          <p class="mt-5 leading-8 text-slate-600 dark:text-slate-300">
+            I’m Idriss Khattabi, an AI Engineer with a Master’s degree in
+            <strong>Artificial Intelligence and Data Science</strong>. My work combines
+            <strong>machine learning</strong>, <strong>NLP</strong>, <strong>generative AI</strong>,
+            and <strong>software engineering</strong> to build practical AI systems.
+          </p>
+
+          <p class="mt-4 leading-8 text-slate-600 dark:text-slate-300">
+            I enjoy creating end-to-end solutions: scraping and processing documents, building data pipelines,
+            integrating vector databases, designing RAG workflows, and delivering full-stack applications with
+            clean user experiences.
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+              <h3 class="font-semibold">Main Focus</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                RAG, AI agents, vector search, document intelligence, backend systems, and digitalization.
+              </p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+              <h3 class="font-semibold">What I Value</h3>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                Practical impact, clean architecture, fast iteration, and solutions that help real users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Skills</p>
+        <h2 class="mt-3 text-3xl font-bold md:text-4xl">Tech stack & tools</h2>
+        <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+          I replaced large images with compact icon badges and added the new skills you mentioned,
+          including <strong>Next.js</strong>, <strong>Crawl4AI</strong>, <strong>Docker Compose</strong>,
+          <strong>Weaviate</strong>, and <strong>Qdrant</strong>.
+        </p>
+      </div>
+
+      <div id="skillsGrid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Experience</p>
+        <h2 class="mt-3 text-3xl font-bold md:text-4xl">Professional journey</h2>
+        <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+          A concise timeline of internships, AI projects, industrial digitalization work, and research contributions.
+        </p>
+      </div>
+
+      <div class="relative border-l border-brand-500/30 pl-6 md:pl-8" id="experienceTimeline"></div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Services</p>
+        <h2 class="mt-3 text-3xl font-bold md:text-4xl">What I can build</h2>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-500/10 text-2xl text-brand-600 dark:text-brand-400">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-semibold">AI Applications</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            RAG apps, AI assistants, document Q&A, feature extraction, and domain-specific AI systems.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/10 text-2xl text-cyan-600 dark:text-cyan-400">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-semibold">Data Pipelines</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            Scraping, document ingestion, transformation, chunking, vector indexing, and automation workflows.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-500/10 text-2xl text-violet-600 dark:text-violet-400">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-semibold">Full-Stack Development</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            Web apps with Django, React, Next.js, Streamlit, REST APIs, and clean responsive interfaces.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 shadow-soft">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 text-2xl text-amber-600 dark:text-amber-400">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-semibold">Analytics & Digitalization</h3>
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            KPI monitoring, dashboards, process analysis, bottleneck detection, and digital workflow platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Projects</p>
+          <h2 class="mt-3 text-3xl font-bold md:text-4xl">Featured work</h2>
+        </div>
+
+        <a
+          href="https://github.com/drisskhattabi6"
+          target="_blank"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
+        >
+          See more on GitHub
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+      </div>
+
+      <div id="projectsGrid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Certifications</p>
+        <h2 class="mt-3 text-3xl font-bold md:text-4xl">Certificates & learning</h2>
+      </div>
+
+      <div id="certificationsGrid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="mb-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Contact</p>
+        <h2 class="mt-3 text-3xl font-bold md:text-4xl">Let’s work together</h2>
+        <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+          You can contact me directly or use the form below. The form uses JavaScript to open your email client.
+        </p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div class="space-y-4">
+          <a href="mailto:drisskhattabi6@gmail.com" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Email</p>
+              <p class="font-medium">drisskhattabi6@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/212635245797" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-500/10 text-green-600 dark:text-green-400">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">WhatsApp</p>
+              <p class="font-medium">+212 635 245 797</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">LinkedIn</p>
+              <p class="font-medium">Connect with me professionally</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/drisskhattabi6" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-500/10 text-slate-700 dark:text-slate-200">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">GitHub</p>
+              <p class="font-medium">See my public repositories</p>
+            </div>
+          </a>
+        </div>
+
+        <form id="contactForm" class="glass rounded-3xl p-6 shadow-soft">
+          <div class="grid gap-4 md:grid-cols-2">
+            <div>
+              <label for="name" class="mb-2 block text-sm font-medium">Your Name</label>
+              <input
+                id="name"
+                type="text"
+                required
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+                placeholder="Type your name"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="mb-2 block text-sm font-medium">Your Email</label>
+              <input
+                id="email"
+                type="email"
+                required
+                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+                placeholder="Type your email"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label for="subject" class="mb-2 block text-sm font-medium">Subject</label>
+            <input
+              id="subject"
+              type="text"
+              required
+              class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+              placeholder="Type the subject"
+            />
+          </div>
+
+          <div class="mt-4">
+            <label for="message" class="mb-2 block text-sm font-medium">Message</label>
+            <textarea
+              id="message"
+              rows="6"
+              required
+              class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-brand-500 dark:border-slate-700 dark:bg-slate-900"
+              placeholder="Type your message here..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-5 inline-flex rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200/70 py-8 dark:border-slate-800/70">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-sm text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 dark:text-slate-400">
+      <p>© 2026 Idriss Khattabi.</p>
+      <div class="flex items-center gap-4">
+        <a href="#home" class="hover:text-brand-600 dark:hover:text-brand-400">Back to top</a>
+        <a href="https://github.com/drisskhattabi6" target="_blank" class="hover:text-brand-600 dark:hover:text-brand-400">GitHub</a>
+        <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="hover:text-brand-600 dark:hover:text-brand-400">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Scripts/script.js"></script>
 </body>
 </html>
