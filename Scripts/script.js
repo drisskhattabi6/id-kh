@@ -78,11 +78,12 @@
         bullets: [
           "Analyzed production data to identify bottlenecks, defect patterns, and performance drifts.",
           "Developed and implemented a digital platform to streamline Project Launch Management, improving process tracking, reporting, and cross-team visibility.",
-          "Acquired strong domain knowledge in industrial production systems, automation processes, and manufacturing performance metrics."
+          "Acquired strong domain knowledge in industrial production systems, automation processes, and manufacturing performance metrics.",
+          "Build Robust Data Pipeline to extract and transform noisy data into structured data, from different sources"  
         ]
       },
       {
-        date: "Dec 2025 - Present",
+        date: "Dec 2025 - May 2025",
         role: "AI Developer Intern",
         company: "Bid2Win",
         location: "Remote - Part-Time",
@@ -124,7 +125,10 @@
         bullets: [
           "Developed an optimization system to improve consistency of AHP pairwise comparison matrices using Genetic Algorithms (GA) and Particle Swarm Optimization (PSO).",
           "Built a Django web application for automated AHP matrix generation and validation.",
-          "Co-authored three research papers with Dr. Chakir Tajani."
+          "Co-authored three research papers with Dr. Chakir Tajani :",
+          "    - A Metaheuristic Approach to Improve Consistency of the Pairwise Matrix in AHP : https://science.lpnu.ua/mmc/all-volumes-and-issues/volume-10-number-4-2023/metaheuristic-approach-improve-consistency ",
+          "    - ESTIMATION OF MISSING ELEMENTS IN PAIRWISE COMPARISON MATRIX USING GENETIC ALGORITHM : https://pjm.ppu.edu/sites/default/files/papers/PJM_13(Special%20Issue%20I)_2024_222_to_231.pdf ",
+          "    - Generating a Set of Consistent Pairwise Comparison Test Matrices in AHP using PSO : https://wseas.com/journals/mathematics/2024/a485106-015(2024).pdf ",
         ]
       }
     ];
