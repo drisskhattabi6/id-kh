@@ -6,12 +6,12 @@
           { name: "PyTorch", icon: "devicon-pytorch-original colored" },
           { name: "scikit-learn", icon: "devicon-scikitlearn-plain colored" },
           { name: "OpenCV", icon: "devicon-opencv-plain colored" },
-          { name: "NLTK", short: "NL" },
+          // { name: "NLTK", short: "NL" },
           { name: "RAG", short: "RAG" },
           { name: "AI Agents", short: "AG" },
           { name: "LangChain", short: "LC" },
           { name: "Prompt Engineering", short: "PE" },
-          { name: "Feature Extraction", short: "FX" }
+          // { name: "Feature Extraction", short: "FX" }
         ]
       },
       {
@@ -32,13 +32,34 @@
         title: "Data Engineering / Scraping",
         items: [
           { name: "Data Pipelines", short: "DP" },
-          { name: "ETL", short: "ETL" },
-          { name: "Crawl4AI", short: "C4" },
+          { name: "ETL / ELT", short: "ETL" },
+          { name: "Data Modeling", short: "DM" },
+          // { name: "Data Quality", short: "DQ" },
+          { name: "Batch & Streaming", short: "BS" },
+          // { name: "Crawl4AI", short: "C4" },
           { name: "Selenium", icon: "devicon-selenium-original colored" },
-          { name: "BeautifulSoup", short: "BS" },
+          // { name: "BeautifulSoup", short: "BS" },
           { name: "Airflow", icon: "devicon-apacheairflow-plain colored" },
           { name: "Kafka", icon: "devicon-apachekafka-original colored" },
-          { name: "Spark", icon: "devicon-apachespark-original colored" }
+          { name: "Spark", icon: "devicon-apachespark-original colored" },
+          { name: "RabbiMQ", icon: "devicon-rabbitmq-plain-wordmark colored" }
+        ]
+      },
+      {
+        title: "Data Science / Analytics",
+        items: [
+          { name: "Pandas", icon: "devicon-pandas-plain colored" },
+          { name: "NumPy", icon: "devicon-numpy-plain colored" },
+          { name: "Matplotlib", icon: "devicon-matplotlib-plain colored" },
+          { name: "Exploratory Data Analysis", short: "EDA" },
+          { name: "Statistics", short: "ST" },
+          { name: "Data Cleaning", short: "DC" },
+          // { name: "Feature Engineering", short: "FE" },
+          // { name: "Model Evaluation", short: "ME" },
+          // { name: "Power BI / Dashboards", short: "BI" },
+          { name: "Dashboards", short: "BI" },
+          { name: "Reporting", short: "RP" },
+          { name: "SQL Analytics", short: "SQL" }
         ]
       },
       {
@@ -46,10 +67,13 @@
         items: [
           { name: "MySQL", icon: "devicon-mysql-plain colored" },
           { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain colored" },
+          { name: "PostgreSQL", icon: "devicon-postgresql-plain-wordmark colored" },
           { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+          { name: "Redis", icon: "devicon-redis-plain colored" },
           { name: "ChromaDB", short: "CH" },
           { name: "Weaviate", short: "WV" },
           { name: "Qdrant", short: "QD" },
+          { name: "Snowflake", short: "SF" },
           { name: "Vector Search", short: "VS" }
         ]
       },
@@ -72,11 +96,12 @@
     const experienceData = [
       {
         date: "Jan 2026 - Present",
-        role: "Digitalization Engineer Intern",
+        role: "Digitalization / Data Engineer Intern",
         company: "KOSTAL Group",
         location: "Tangier",
         bullets: [
-          "Analyzed production data to identify bottlenecks, defect patterns, and performance drifts.",
+          // "Analyzed production data to identify bottlenecks, defect patterns, and performance drifts.",
+          "Analyzed production data to identify bottlenecks, defect patterns, and performance drifts, while exploring AI-driven approaches for anomaly detection, predictive insights, and intelligent process monitoring",
           "Developed and implemented a digital platform to streamline Project Launch Management, improving process tracking, reporting, and cross-team visibility.",
           "Acquired strong domain knowledge in industrial production systems, automation processes, and manufacturing performance metrics.",
           "Build Robust Data Pipeline to extract and transform noisy data into structured data, from different sources"  
@@ -84,7 +109,7 @@
       },
       {
         date: "Dec 2025 - May 2025",
-        role: "AI Developer Intern",
+        role: "AI / Data Engineer Intern",
         company: "Bid2Win",
         location: "Remote - Part-Time",
         bullets: [
@@ -96,7 +121,7 @@
       },
       {
         date: "Sept 2025 - Dec 2025",
-        role: "AI Developer Intern",
+        role: "AI / Data Engineer Intern",
         company: "High Commission for Planning",
         location: "Remote",
         bullets: [
@@ -108,7 +133,7 @@
       },
       {
         date: "Feb 2025 - July 2025",
-        role: "AI Developer Intern",
+        role: "AI / Data Engineer Intern",
         company: "TNA Consulting",
         location: "Casablanca",
         bullets: [
@@ -176,12 +201,12 @@
         link: "https://github.com/drisskhattabi6/Commerce-Data-Warehouse-Building-and-Analysis",
         tags: ["Data Warehouse", "MySQL", "ETL", "Pandas", "Power BI"]
       },
-      {
-        title: "OCR From Scratch",
-        image: "Imgs/ocr.jpg",
-        link: "https://github.com/drisskhattabi6/OCR-From-Scratch",
-        tags: ["OCR", "CNN", "CRNN", "YOLO", "OpenCV", "Streamlit"]
-      },
+      // {
+      //   title: "OCR From Scratch",
+      //   image: "Imgs/ocr.jpg",
+      //   link: "https://github.com/drisskhattabi6/OCR-From-Scratch",
+      //   tags: ["OCR", "CNN", "CRNN", "YOLO", "OpenCV", "Streamlit"]
+      // },
       {
         title: "Real-Time Twitter Sentiment Analysis",
         image: "Imgs/Sentiment-Analysis.png",
@@ -207,7 +232,19 @@
       },
       {
         title: "Associate Data Analyst in SQL",
-        link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/6c0ad114a9ec6f303c0da5c924f903fddf9611da"
+        link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/c79d683ec25201af13ec23d156ce0c7a71150fc9"
+      },
+      { 
+        title: "Associate Data Engineer in SQL", 
+        link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/6c0ad114a9ec6f303c0da5c924f903fddf9611da" 
+      },
+      { 
+        title: "Microsoft Azure Fundamentals (AZ-900)", 
+        link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/5cb9b08098fa1e0092674af57bf1298aa566087f" 
+      },
+      { 
+        title: "Data Analyst with Python", 
+        link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/71018bcbfe64891cbe242561c1a2334e7b5ffc67" 
       }
     ];
 
@@ -324,10 +361,10 @@
             <h3 class="mt-5 text-lg font-semibold">${cert.title}</h3>
             <a
               href="${cert.link}"
-              target="_blank"
+              ${cert.link === "#" ? 'aria-label="Certificate link to be added" onclick="return false;"' : 'target="_blank" rel="noopener noreferrer"'}
               class="mt-5 inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
             >
-              View Certificate
+              ${cert.link === "#" ? "Add Certificate Link" : "View Certificate"}
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
           </div>
