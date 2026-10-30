@@ -13,7 +13,12 @@
   />
   <meta name="author" content="Idriss Khattabi" />
   <title>Portfolio | Idriss Khattabi</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23f97316' d='M34 4C23 12 18 24 19 36l-9 9 1 8 11-4c12 1 24-5 32-16C59 22 52 9 34 4Z'/%3E%3Ccircle cx='38' cy='24' r='7' fill='white'/%3E%3Cpath fill='%23ea580c' d='M20 38 9 39l-5 10 15-3Zm8 8-1 11 10 3 3-15Z'/%3E%3Cpath fill='%23fb923c' d='m17 49-7 10 13-4Z'/%3E%3C/svg%3E" />
+
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23f97316' d='M34 4C23 12 18 24 19 36l-9 9 1 8 11-4c12 1 24-5 32-16C59 22 52 9 34 4Z'/%3E%3Ccircle cx='38' cy='24' r='7' fill='white'/%3E%3Cpath fill='%23ea580c' d='M20 38 9 39l-5 10 15-3Zm8 8-1 11 10 3 3-15Z'/%3E%3Cpath fill='%23fb923c' d='m17 49-7 10 13-4Z'/%3E%3C/svg%3E"
+  />
 
   <script>
     if (
@@ -80,10 +85,6 @@
       border: 1px solid rgba(51, 65, 85, 0.55);
     }
 
-    .section-title {
-      @apply text-3xl md:text-4xl font-bold tracking-tight;
-    }
-
     .gradient-text {
       background: linear-gradient(90deg, #10b981, #06b6d4);
       -webkit-background-clip: text;
@@ -106,15 +107,20 @@
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+
+<body class="overflow-x-hidden bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
   <div class="fixed inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(6,182,212,0.10),_transparent_25%)] dark:bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.12),_transparent_28%),radial-gradient(circle_at_bottom_right,_rgba(6,182,212,0.12),_transparent_25%)]"></div>
   <canvas id="networkCanvas" class="fixed inset-0 -z-10"></canvas>
 
   <!-- Navbar -->
   <header class="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur-md dark:border-slate-800/60 dark:bg-slate-950/70">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
       <a href="#home" class="flex items-center gap-3">
-        <img src="Imgs/my logo1.png" alt="Idriss Khattabi logo" class="h-10 w-30 rounded-l object-cover" />
+        <img
+          src="Imgs/my logo1.png"
+          alt="Idriss Khattabi logo"
+          class="h-10 w-auto max-w-[120px] object-contain sm:max-w-[140px]"
+        />
         <div>
           <p class="text-sm font-semibold leading-none">Idriss Khattabi</p>
           <p class="text-xs text-slate-500 dark:text-slate-400">AI / Data Engineer</p>
@@ -142,6 +148,7 @@
         <a
           href="./CVs/Idriss_Khattabi_AI_Data_CV_EN.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           class="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700 lg:inline-flex"
         >
           Download CV
@@ -151,6 +158,7 @@
           id="menuBtn"
           class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm lg:hidden dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
           aria-label="Open menu"
+          aria-expanded="false"
         >
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -170,6 +178,7 @@
         <a
           href="./CVs/Idriss_Khattabi_AI_Data_CV_EN.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           class="mt-2 rounded-xl bg-brand-600 px-4 py-3 text-center font-semibold text-white"
         >
           Download CV
@@ -180,97 +189,90 @@
 
   <main id="home">
     <!-- Hero -->
-    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <span class="inline-flex rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 dark:border-brand-900 dark:bg-brand-500/10 dark:text-brand-300">
+    <section class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-24">
+      <div class="grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+
+        <!-- Image first on mobile -->
+        <div class="order-1 flex justify-center lg:order-2">
+          <div class="relative w-full max-w-[280px] sm:max-w-[350px]">
+            <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/20 to-cyan-500/20 blur-3xl"></div>
+            <div class="glass relative rounded-[2rem] p-3 shadow-soft">
+              <img
+                src="Imgs/img2.jpg"
+                alt="Idriss Khattabi portrait"
+                class="aspect-[3/4] w-full rounded-[1.5rem] object-cover sm:h-[450px] sm:w-[350px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Text second on mobile -->
+        <div class="order-2 text-center lg:order-1 lg:text-left">
+          <span class="inline-flex rounded-full border border-brand-200 bg-brand-50 px-3 py-2 text-xs font-medium text-brand-700 dark:border-brand-900 dark:bg-brand-500/10 dark:text-brand-300 sm:px-4 sm:text-sm">
             Open to AI, Data, Software Engineering & Digitalization opportunities
           </span>
 
-          <h1 class="mt-6 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 class="mt-5 text-3xl font-extrabold leading-tight sm:mt-6 sm:text-5xl lg:text-6xl">
             Hi, I'm <span class="gradient-text">Idriss Khattabi</span>
           </h1>
 
-          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+          <p class="mt-4 text-base leading-7 text-slate-600 dark:text-slate-300 sm:mt-5 sm:text-lg sm:leading-8">
             AI and Data professional building <strong>RAG systems</strong>, <strong>AI agents</strong>,
             <strong>data pipelines</strong>, <strong>analytics dashboards</strong>, machine-learning solutions,
             and <strong>full-stack applications</strong>. Open to opportunities in AI, Data, Software Engineering, and Digitalization.
           </p>
 
-          <div class="mt-5 flex flex-wrap gap-3 text-sm">
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">RAG</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">AI Agents</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Vector DBs</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Data Engineering</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Analytics & BI</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Machine Learning</span>
-            <span class="rounded-full bg-slate-100 px-4 py-2 dark:bg-slate-900">Django / Next.js</span>
+          <div class="mt-5 flex flex-wrap justify-center gap-2 text-xs sm:gap-3 sm:text-sm lg:justify-start">
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">RAG</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">AI Agents</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">Vector DBs</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">Data Engineering</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">Analytics & BI</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">Machine Learning</span>
+            <span class="rounded-full bg-slate-100 px-3 py-2 dark:bg-slate-900 sm:px-4">Django / Next.js</span>
           </div>
 
           <p class="mt-5 text-sm text-slate-500 dark:text-slate-400">
             Last portfolio update: <strong>October 2026</strong>
           </p>
 
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#contact" class="rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700">
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4 lg:justify-start">
+            <a
+              href="#contact"
+              class="w-full rounded-full bg-brand-600 px-6 py-3 text-center font-semibold text-white transition hover:bg-brand-700 sm:w-auto"
+            >
               Hire Me
             </a>
-            <a href="#projects" class="rounded-full border border-slate-300 px-6 py-3 font-semibold transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-900">
+            <a
+              href="#projects"
+              class="w-full rounded-full border border-slate-300 px-6 py-3 text-center font-semibold transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-900 sm:w-auto"
+            >
               View Projects
             </a>
           </div>
 
-          <div class="mt-8 flex flex-wrap items-center gap-4 text-2xl">
-            <a href="https://github.com/drisskhattabi6" target="_blank" class="transition hover:text-brand-600" aria-label="GitHub">
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-2xl lg:justify-start">
+            <a href="https://github.com/drisskhattabi6" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-600" aria-label="GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="transition hover:text-brand-600" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-600" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" class="transition hover:text-brand-600" aria-label="Instagram">
+            <a href="https://www.instagram.com/idriss_khattabi/" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-600" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.datacamp.com/portfolio/drisskhattabi6" target="_blank" class="transition hover:text-brand-600" aria-label="DataCamp">
+            <a href="https://www.datacamp.com/portfolio/drisskhattabi6" target="_blank" rel="noopener noreferrer" class="transition hover:text-brand-600" aria-label="DataCamp">
               <img src="Imgs/datacamp.svg" alt="DataCamp" class="h-7 w-7" />
             </a>
-          </div>
-
-          <!-- <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="glass rounded-2xl p-4 shadow-soft">
-              <p id="experienceCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">5</p>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Experience entries</p>
-            </div>
-            <div class="glass rounded-2xl p-4 shadow-soft">
-              <p id="projectCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">10</p>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Featured projects</p>
-            </div>
-            <div class="glass rounded-2xl p-4 shadow-soft">
-              <p id="certCount" class="text-2xl font-bold text-brand-600 dark:text-brand-400">3</p>
-              <p class="text-sm text-slate-500 dark:text-slate-400">Certificates</p>
-            </div>
-          </div> -->
-        </div>
-
-        <div class="flex justify-center">
-          <div class="relative">
-            <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-500/20 to-cyan-500/20 blur-3xl"></div>
-            <div class="glass relative rounded-[2rem] p-3 shadow-soft">
-              <img
-                src="Imgs/img2.jpg"
-                alt="Idriss Khattabi portrait"
-                class="h-[380px] w-[300px] rounded-[1.5rem] object-cover sm:h-[450px] sm:w-[350px]"
-              />
-            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="about" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="grid items-center gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <div class="glass rounded-3xl p-4 shadow-soft">
-          <!-- <img src="Imgs/1.jpg" alt="Idriss Khattabi" class="h-full w-full rounded-2xl object-cover" /> -->
           <img src="Imgs/img1.jpg" alt="Idriss Khattabi" class="h-full w-full rounded-2xl object-cover" />
         </div>
 
@@ -311,22 +313,17 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="skills" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Skills</p>
         <h2 class="mt-3 text-3xl font-bold md:text-4xl">Tech stack & tools</h2>
-        <!-- <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
-          I replaced large images with compact icon badges and added the new skills you mentioned,
-          including <strong>Next.js</strong>, <strong>Crawl4AI</strong>, <strong>Docker Compose</strong>,
-          <strong>Weaviate</strong>, and <strong>Qdrant</strong>.
-        </p> -->
       </div>
 
       <div id="skillsGrid" class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"></div>
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="experience" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Experience</p>
         <h2 class="mt-3 text-3xl font-bold md:text-4xl">Professional journey</h2>
@@ -339,7 +336,7 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="services" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Services</p>
         <h2 class="mt-3 text-3xl font-bold md:text-4xl">What I can build</h2>
@@ -389,7 +386,7 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="projects" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Projects</p>
@@ -399,6 +396,7 @@
         <a
           href="https://github.com/drisskhattabi6"
           target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300"
         >
           See more on GitHub
@@ -410,7 +408,7 @@
     </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="certifications" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Certifications</p>
         <h2 class="mt-3 text-3xl font-bold md:text-4xl">Certificates & learning</h2>
@@ -420,14 +418,13 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section id="contact" class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <div class="mb-8">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600 dark:text-brand-400">Contact</p>
         <h2 class="mt-3 text-3xl font-bold md:text-4xl">Let’s work together</h2>
         <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
-          You can contact me directly or use the form below. 
+          You can contact me directly or use the form below.
         </p>
-        <!-- The form uses JavaScript to open your email client. -->
       </div>
 
       <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
@@ -442,7 +439,7 @@
             </div>
           </a>
 
-          <a href="https://wa.me/212635245797" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+          <a href="https://wa.me/212635245797" target="_blank" rel="noopener noreferrer" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-500/10 text-green-600 dark:text-green-400">
               <i class="fa-brands fa-whatsapp"></i>
             </div>
@@ -452,7 +449,7 @@
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+          <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" rel="noopener noreferrer" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
               <i class="fa-brands fa-linkedin"></i>
             </div>
@@ -462,7 +459,7 @@
             </div>
           </a>
 
-          <a href="https://github.com/drisskhattabi6" target="_blank" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
+          <a href="https://github.com/drisskhattabi6" target="_blank" rel="noopener noreferrer" class="glass flex items-center gap-4 rounded-3xl p-5 shadow-soft">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-500/10 text-slate-700 dark:text-slate-200">
               <i class="fa-brands fa-github"></i>
             </div>
@@ -522,7 +519,7 @@
 
           <button
             type="submit"
-            class="mt-5 inline-flex rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700"
+            class="mt-5 inline-flex w-full justify-center rounded-full bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-700 sm:w-auto"
           >
             Send Message
           </button>
@@ -532,12 +529,12 @@
   </main>
 
   <footer class="border-t border-slate-200/70 py-8 dark:border-slate-800/70">
-    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-sm text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 dark:text-slate-400">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-center text-sm text-slate-500 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:text-left dark:text-slate-400">
       <p>© 2026 Idriss Khattabi.</p>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center justify-center gap-4 lg:justify-start">
         <a href="#home" class="hover:text-brand-600 dark:hover:text-brand-400">Back to top</a>
-        <a href="https://github.com/drisskhattabi6" target="_blank" class="hover:text-brand-600 dark:hover:text-brand-400">GitHub</a>
-        <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" class="hover:text-brand-600 dark:hover:text-brand-400">LinkedIn</a>
+        <a href="https://github.com/drisskhattabi6" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400">GitHub</a>
+        <a href="https://www.linkedin.com/in/idriss-khattabi-b3a266235/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600 dark:hover:text-brand-400">LinkedIn</a>
       </div>
     </div>
   </footer>
